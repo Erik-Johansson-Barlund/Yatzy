@@ -1,6 +1,8 @@
-tr {
-	background-color: antiquewhite;
+table {
+	border: 2px solid black;
 }
-td {
-	background-color: aquamarine;
+
+td,
+th {
+	border: 1px solid grey;
 }
