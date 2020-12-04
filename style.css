@@ -6,3 +6,12 @@ td,
 th {
 	border: 1px solid grey;
 }
+
+td:nth-child(even) {
+	background-color: rgba(127, 255, 212, 0.5);
+}
+.rad {
+	background-color: grey;
+	width: 150px;
+	height: 30px;
+}
