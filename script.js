@@ -1,79 +1,54 @@
-document.addEventListener('DOMContentLoaded', function (e) {
-	let btn = document.getElementById('btn');
+class Player {
+  constructor(name, scoreInputFields, scoreField) {
+    this.name = name;
+    this.scoreInputFields = scoreInputFields;
+    this.score = 0;
+    this.scoreField = scoreField;
+  }
 
-	btn.addEventListener('click', function (e) {
-		let values = [];
-		values.push(document.getElementById('player_1_ones').value);
-		values.push(document.getElementById('player_1_twos').value);
-		values.push(document.getElementById('player_1_threes').value);
-		values.push(document.getElementById('player_1_fours').value);
-		values.push(document.getElementById('player_1_fives').value);
-		values.push(document.getElementById('player_1_sixes').value);
+  calculateScore() {
+    const score = Array.from(this.scoreInputFields)
+      .map(
+        (inputField, index) =>
+          (inputField.valueAsNumber ? inputField.valueAsNumber : 0) *
+          (index + 1)
+      ) // Index begins at zero, no zero score => add one
+      .reduce((prev, curr) => prev + curr);
+    this.scoreField.innerHTML = score;
+  }
+}
 
-/*		values = [
-			player_1_ones,
-			player_1_twos,
-			player_1_threes,
-			player_1_fours,
-			player_1_fives,
-			player_1_sixes,
-		];
+class Bouns {}
 
-		let player_1_ones = document.getElementById('player_1_ones').value;
-		let player_1_twos = document.getElementById('player_1_twos').value;
-		let player_1_threes = document.getElementById('player_1_threes').value;
-		let player_1_fours = document.getElementById('player_1_fours').value;
-		let player_1_fives = document.getElementById('player_1_fives').value;
-		let player_1_sixes = document.getElementById('player_1_sixes').value;
-*/
-		let player_1_sum = document.getElementById('player_1_sum');
-		let player_1_bonus = document.getElementById('player_1_bonus');
+window.addEventListener("DOMContentLoaded", () => {
+  const playerOne = new Player(
+    "Christian",
+    document.getElementsByClassName("player_one_input"),
+    document.getElementById("player_one_sum")
+  );
+  const playerTwo = new Player(
+    "Aki",
+    document.getElementsByClassName("player_two_input"),
+    document.getElementById("player_two_sum")
+  );
+  const playerThree = new Player(
+    "Patrik",
+    document.getElementsByClassName("player_three_input"),
+    document.getElementById("player_three_sum")
+  );
+  const playerFour = new Player(
+    "Erik",
+    document.getElementsByClassName("player_four_input"),
+    document.getElementById("player_four_sum")
+  );
 
-		//console.log(player_1_ones);
-		countDiceValues(values);
-	});
+  const players = [playerOne, playerTwo, playerThree, playerFour];
+
+  document.getElementById("btn").addEventListener("click", () => {
+    console.log("jag görs");
+
+    for (player of players) {
+      player.calculateScore();
+    }
+  });
 });
-function countDiceValues(values) {
-	let result = 0;
-
-	for (let value = 0; value < values.length; value++) {
-		let current = Number(values[value]) * (value + 1);
-		result += current;
-	}
-	if (result >= 63) {
-		player_1_bonus.innerHTML = '50';
-	}
-	player_1_sum.innerHTML = result;
-}
-/*		
-class Die {
-	constructor(num) {
-		this.no = num;
-		this.diceArea = document.getElementById('diceArea' + this.num);
-		this.value = 0;
-	}
-	throw() {
-		this.value = Math.ceil(Math.random() * 6);
-		this.diceArea.innerHTML = this.value;
-		return this.value;
-	}
-}
-class Dice {
-	constructor(num = 5) {
-		this.dice = [];
-		this.diceValues = [];
-		for (let i = 0; i < num; i++) {
-			let d = new Die(i);
-			this.dice.push(d);
-		}
-	}
-	throw() {
-		for (let die of this.dice) {
-			die.throw();
-			this.diceValues.push(die.value);
-		}
-	}
-}
-
-//let set = new Dice();
-*/
