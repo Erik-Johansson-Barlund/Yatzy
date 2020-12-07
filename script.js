@@ -32,6 +32,9 @@ function countDiceValues(values) {
 		let current = Number(values[value]) * (value + 1);
 		result += current;
 	}
+	if (result >= 63) {
+		player_1_bonus.innerHTML = '50';
+	}
 	player_1_sum.innerHTML = result;
 }
 /*		
