@@ -12,6 +12,7 @@
       <div>
        
 	<!-- Christian skriver lite text bara för att kolla att git fungerar som det ska. -->
+        <form>
         <table>
         <tr class="dark">
           <td>Spelare/Player</td>
@@ -22,56 +23,68 @@
         </tr>
         <tr>
           <td>Ettor/ones</td>
-          <td>1</td>
+          <td>
+            <input type="number" id="player_1_ones">
+          </td>
           <td>2</td>
           <td>3</td>
           <td>4</td>
         </tr>
         <tr>
           <td>Tvåor/Twos</td>
-          <td>1</td>
+          <td>
+            <input type="number" id="player_1_twos">
+          </td>
           <td>2</td>
           <td>3</td>
           <td>4</td>
         </tr>
         <tr>
           <td>Treor/Threes</td>
-          <td>1</td>
+          <td>
+            <input type="number" id="player_1_threes">
+          </td>
           <td>2</td>
           <td>3</td>
           <td>4</td>
         </tr>
         <tr>
           <td>Fyror/Fours</td>
-          <td>1</td>
+          <td>
+            <input type="number" id="player_1_fours">
+          </td>
           <td>2</td>
           <td>3</td>
           <td>4</td>
         </tr>
         <tr>
           <td>Femmor/Fives</td>
-          <td>1</td>
+          <td>
+            <input type="number" id="player_1_fives">
+          </td>
           <td>2</td>
           <td>3</td>
           <td>4</td>
         </tr>
         <tr>
           <td>Sexor/Sixes</td>
-          <td>1</td>
+          <td>
+            <input type="number" id="player_1_sixes">
+          </td>
           <td>2</td>
           <td>3</td>
           <td>4</td>
         </tr>
         <tr class="dark">
           <td>Summa/Sum</td>
-          <td class="light"></td>
+          <td class="light" id="player_1_sum"></td>
           <td class="light"></td>
           <td class="light"></td>
           <td class="light"></td>
         </tr>
         <tr class="dark">
           <td>Bonus</td>
-          <td class="light"></td>
+          <td class="light" id="player_1_bonus"></td>
           <td class="light"></td>
           <td class="light"></td>
           <td class="light"></td>
@@ -85,7 +98,9 @@
         </tr>
         <tr>
           <td>Två par/Two pairstd</td>
-          <td></td>
+          <td>
+
+          </td>
           <td></td>
           <td></td>
           <td></td>
@@ -146,7 +161,9 @@
           <td class="light"></td>
           <td class="light"></td>
         </tr>
-       </table>      
+       </table> 
+       <button type="button" id="btn">Beräkna</button>   
+      </form>  
       </div>
       <script src="script.js"></script>
   </body>
