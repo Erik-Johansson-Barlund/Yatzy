@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', function (e) {
 
 	btn.addEventListener('click', function (e) {
 		let values = [];
-		let player_1_ones = document.getElementById('player_1_ones').value;
-		let player_1_twos = document.getElementById('player_1_twos').value;
-		let player_1_threes = document.getElementById('player_1_threes').value;
-		let player_1_fours = document.getElementById('player_1_fours').value;
-		let player_1_fives = document.getElementById('player_1_fives').value;
-		let player_1_sixes = document.getElementById('player_1_sixes').value;
+		values.push(document.getElementById('player_1_ones').value);
+		values.push(document.getElementById('player_1_twos').value);
+		values.push(document.getElementById('player_1_threes').value);
+		values.push(document.getElementById('player_1_fours').value);
+		values.push(document.getElementById('player_1_fives').value);
+		values.push(document.getElementById('player_1_sixes').value);
 
-		values = [
+/*		values = [
 			player_1_ones,
 			player_1_twos,
 			player_1_threes,
@@ -18,6 +18,14 @@ document.addEventListener('DOMContentLoaded', function (e) {
 			player_1_fives,
 			player_1_sixes,
 		];
+
+		let player_1_ones = document.getElementById('player_1_ones').value;
+		let player_1_twos = document.getElementById('player_1_twos').value;
+		let player_1_threes = document.getElementById('player_1_threes').value;
+		let player_1_fours = document.getElementById('player_1_fours').value;
+		let player_1_fives = document.getElementById('player_1_fives').value;
+		let player_1_sixes = document.getElementById('player_1_sixes').value;
+*/
 		let player_1_sum = document.getElementById('player_1_sum');
 		let player_1_bonus = document.getElementById('player_1_bonus');
 
