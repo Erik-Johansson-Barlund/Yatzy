@@ -1,170 +1,202 @@
 <!DOCTYPE html>
 <html lang="sv">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Startsida</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-      <h1 id="headline">Yatzy!</h1>
-      <div>
-       
-	<!-- Christian skriver lite text bara för att kolla att git fungerar som det ska. -->
-        <form>
+    <h1 id="headline">Yatzy!</h1>
+    <div>
+      <!-- Christian skriver lite text bara för att kolla att git fungerar som det ska. -->
+      <form>
         <table>
-        <tr class="dark">
-          <td>Spelare/Player</td>
-          <td class="light">Christian</td>
-          <td class="light">Aki</td>
-          <td class="light">Patrik</td>
-          <td class="light">Erik</td>
-        </tr>
-        <tr>
-          <td>Ettor/ones</td>
-          <td>
-            <input type="number" id="player_1_ones" max="6">
-          </td>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Tvåor/Twos</td>
-          <td>
-            <input type="number" id="player_1_twos">
-          </td>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Treor/Threes</td>
-          <td>
-            <input type="number" id="player_1_threes">
-          </td>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Fyror/Fours</td>
-          <td>
-            <input type="number" id="player_1_fours">
-          </td>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Femmor/Fives</td>
-          <td>
-            <input type="number" id="player_1_fives">
-          </td>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Sexor/Sixes</td>
-          <td>
-            <input type="number" id="player_1_sixes">
-          </td>
-          <td>2</td>
-          <td>3</td>
-          <td>4</td>
-        </tr>
-        <tr class="dark">
-          <td>Summa/Sum</td>
-          <td class="light" id="player_1_sum"></td>
-          <td class="light"></td>
-          <td class="light"></td>
-          <td class="light"></td>
-        </tr>
-        <tr class="dark">
-          <td>Bonus</td>
-          <td class="light" id="player_1_bonus"></td>
-          <td class="light"></td>
-          <td class="light"></td>
-          <td class="light"></td>
-        </tr>
-        <tr>
-          <td>Par/Pair</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Två par/Two pairstd</td>
-          <td>
-
-          </td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Tretal/Three of a kind</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Fyrtal/Four of a kind</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Liten stege/Small straight</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Stor stege/Large straight</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Kåk/Full house</td>
-          <td></td>
-          <td></td>
-          <td></td>
-         <td></td>
-        </tr>
-        <tr>
-          <td>Chans/Chance</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td class="rad">Yatzy</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-       <tr class="dark">
-          <td span="2">Totalt/Total</td>
-          <td class="light"></td>
-          <td class="light"></td>
-          <td class="light"></td>
-          <td class="light"></td>
-        </tr>
-       </table> 
-       <button type="button" id="btn">Beräkna</button>   
-      </form>  
-      </div>
-      <script src="script.js"></script>
+          <tr class="dark">
+            <td>Spelare/Player</td>
+            <td class="light">Christian</td>
+            <td class="light">Aki</td>
+            <td class="light">Patrik</td>
+            <td class="light">Erik</td>
+          </tr>
+          <tr>
+            <td>Ettor/ones</td>
+            <td>
+              <input type="number" max="6" class="player_one_input" />
+            </td>
+            <td>
+              <input type="number" max="6" class="player_two_input" />
+            </td>
+            <td>
+              <input type="number" class="player_three_input" />
+            </td>
+            <td>
+              <input type="number" class="player_four_input" />
+            </td>
+          </tr>
+          <tr>
+            <td>Tvåor/Twos</td>
+            <td>
+              <input type="number" class="player_one_input" />
+            </td>
+            <td>
+              <input type="number" class="player_two_input" />
+            </td>
+            <td>
+              <input type="number" class="player_three_input" />
+            </td>
+            <td>
+              <input type="number" class="player_four_input" />
+            </td>
+          </tr>
+          <tr>
+            <td>Treor/Threes</td>
+            <td>
+              <input type="number" class="player_one_input" />
+            </td>
+            <td>
+              <input type="number" class="player_two_input" />
+            </td>
+            <td>
+              <input type="number" class="player_three_input" />
+            </td>
+            <td>
+              <input type="number" class="player_four_input" />
+            </td>
+          </tr>
+          <tr>
+            <td>Fyror/Fours</td>
+            <td>
+              <input type="number" class="player_one_input" />
+            </td>
+            <td>
+              <input type="number" name="" class="player_two_input" />
+            </td>
+            <td>
+              <input type="number" class="player_three_input" />
+            </td>
+            <td>
+              <input type="number" class="player_four_input" />
+            </td>
+          </tr>
+          <tr>
+            <td>Femmor/Fives</td>
+            <td>
+              <input type="number" class="player_one_input" />
+            </td>
+            <td>
+              <input type="number" class="player_two_input" />
+            </td>
+            <td>
+              <input type="number" class="player_three_input" />
+            </td>
+            <td>
+              <input type="number" class="player_four_input" />
+            </td>
+          </tr>
+          <tr>
+            <td>Sexor/Sixes</td>
+            <td>
+              <input type="number" class="player_one_input" />
+            </td>
+            <td>
+              <input type="number" class="player_two_input" />
+            </td>
+            <td>
+              <input type="number" class="player_three_input" />
+            </td>
+            <td>
+              <input type="number" class="player_four_input" />
+            </td>
+          </tr>
+          <tr class="dark">
+            <td>Summa/Sum</td>
+            <td class="light" id="player_one_sum"></td>
+            <td class="light" id="player_two_sum"></td>
+            <td class="light" id="player_three_sum"></td>
+            <td class="light" id="player_four_sum"></td>
+          </tr>
+          <tr class="dark">
+            <td>Bonus</td>
+            <td class="light" id="player_1_bonus"></td>
+            <td class="light"></td>
+            <td class="light"></td>
+            <td class="light"></td>
+          </tr>
+          <tr>
+            <td>Par/Pair</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Två par/Two pairstd</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Tretal/Three of a kind</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Fyrtal/Four of a kind</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Liten stege/Small straight</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Stor stege/Large straight</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Kåk/Full house</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Chans/Chance</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="rad">Yatzy</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="dark">
+            <td span="2">Totalt/Total</td>
+            <td class="light"></td>
+            <td class="light"></td>
+            <td class="light"></td>
+            <td class="light"></td>
+          </tr>
+        </table>
+        <button type="button" id="btn">Beräkna</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
   </body>
-  </html>
+</html>
